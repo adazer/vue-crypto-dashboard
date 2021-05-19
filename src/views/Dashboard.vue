@@ -7,6 +7,8 @@
             <button class="add-btn" @click="addCoinPair"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
         </div>
         <CryptoBoard></CryptoBoard>
+        <risk-report></risk-report>
+        <APIKeys></APIKeys>
     </div>
 </template>
 <script>
@@ -16,6 +18,8 @@
   import { isEmpty } from '../util/Utility'
   import {subscribeSymbol} from '../services/binance'
   import { mapState } from 'vuex'
+  import RiskReport from '../components/RiskReport.vue'
+  import APIKeys from '../components/APIKeys.vue'
   export default {
     name: 'dashboard',
     data() {
@@ -38,7 +42,9 @@
     },
     components: {
       vSelect,
-      CryptoBoard
+      CryptoBoard,
+      RiskReport,
+      APIKeys
     },
     methods: {
       resetBase() {

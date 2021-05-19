@@ -1,0 +1,5 @@
+type BinanceKey @model @auth(rules: [{ allow: owner }]) {
+  provider: String
+  apiKey: String
+  secretKey: String
+}

@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "vuecryptodashboard",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authvuecryptodashboarde50de69d",
+      "Outputs.UserPoolId"
+    ]
+  }
+}
