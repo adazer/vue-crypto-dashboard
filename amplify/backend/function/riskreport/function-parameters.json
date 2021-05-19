@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "auth": {
+      "vuecryptodashboarde50de69d": [
+        "read"
+      ]
+    },
+    "function": {
+      "vuecryptodashboardebce90c0": [
+        "read"
+      ]
+    },
+    "storage": {
+      "BinanceKey:@model(appsync)": [
+        "read"
+      ]
+    }
+  },
+  "lambdaLayers": []
+}

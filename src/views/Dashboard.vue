@@ -7,7 +7,7 @@
             <button class="add-btn" @click="addCoinPair"><i class="fa fa-plus fa-lg" aria-hidden="true"></i></button>
         </div>
         <CryptoBoard></CryptoBoard>
-        <risk-report></risk-report>
+        <RiskReport></RiskReport>
         <APIKeys></APIKeys>
     </div>
 </template>

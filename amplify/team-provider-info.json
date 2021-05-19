@@ -18,7 +18,15 @@
       "function": {
         "vuecryptodashboardebce90c0": {
           "deploymentBucketName": "amplify-vuecryptodashboard-dev-91010-deployment",
-          "s3Key": "amplify-builds/vuecryptodashboardebce90c0-6b3970645a6f6b6e7177-build.zip"
+          "s3Key": "amplify-builds/vuecryptodashboardebce90c0-6f2f5863696430787270-build.zip"
+        },
+        "riskreport": {
+          "deploymentBucketName": "amplify-vuecryptodashboard-dev-91010-deployment",
+          "s3Key": "amplify-builds/riskreport-4471757236616a414e57-build.zip"
+        },
+        "reportsRisk": {
+          "deploymentBucketName": "amplify-vuecryptodashboard-dev-91010-deployment",
+          "s3Key": "amplify-builds/reportsRisk-434357552f4c534c4767-build.zip"
         }
       }
     }

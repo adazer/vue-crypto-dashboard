@@ -2,7 +2,10 @@
   <div id="riskreport">
     <h1>Risk Report</h1>
     <button v-on:click="getRiskReport">Get Risk Report</button>
-    <p>{{ reportName }}</p>
+    <p>{{ status }}</p>
+    <div v-for="item in items" :key="item">
+      <h3>{{ item }}</h3>
+    </div>
   </div>
 </template>
 
@@ -18,27 +21,30 @@ export default {
   },
   data() {
     return {
-      reportName: 'No report'
+      status: 'No report',
+      items: []
     }
   },
   methods: {
     getRiskReport() {
-        this.reportName = 'getting auth'
+        this.status = 'getting auth'
         const apiName = 'api12b26684';
         const path = '/report';
         const myInit = { 
             headers: {}, //Authorization: `Bearer ${(Auth.currentSession()).getIdToken().getJwtToken()}`,
         };
-        this.reportName = 'invoking api'
+        this.status = 'invoking api'
 
         API
             .get(apiName, path, myInit)
             .then(response => {
-                this.reportName = response
+                this.status = 'received'
+                this.items = response
+                console.log(response)
             })
             .catch(error => {
                 console.log(error.response);
-                this.reportName = error.response
+                this.status = error.response
 
             });
     }
