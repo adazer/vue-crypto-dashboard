@@ -7,7 +7,8 @@ const subscribeSymbol = function(symbol) {
   wsApi.onTicker(symbol,(ticker) => {
     const tick = {
       price: parseFloat(ticker.c),
-      vol: parseFloat(ticker.q).toFixed(2),
+      // vol: parseFloat(ticker.q).toFixed(2), this is in quote
+      vol: parseFloat(ticker.v).toFixed(2),
       percent: parseFloat(ticker.P).toFixed(2),
       chg: ticker.p,
       high: ticker.h,

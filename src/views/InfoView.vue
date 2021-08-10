@@ -21,7 +21,7 @@
                                         <span class="indicator"></span><span>{{ ticker.percent }}%</span>
                                     </div>
                                     <div class="icon-chg text-right">
-                                        {{parseFloat(ticker.chg).toFixed((currency.quote === 'USDT') ? 3 : 8)}} <span class="x-small">{{currency.quote}}</span>
+                                        {{parseFloat(ticker.chg).toFixed((currency.quote === 'USDT') ? 2 : 8)}} <span class="x-small">{{currency.quote}}</span>
                                     </div>
                                 </div>
                                 <div class="col-12 x-small">{{ticker.time | timeformat}}</div>

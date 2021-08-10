@@ -21,8 +21,8 @@
     data() {
       return {
         currencyList: coins,
-        quote: 'BNB',
-        quoteOptions: ['BNB','BTC','ETH', 'USDT'],
+        quote: 'USDT',
+        quoteOptions: ['USDT'],
         baseCurrency: {}
       }
     },

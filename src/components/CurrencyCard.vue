@@ -15,8 +15,8 @@
             </div>
             <div :class="[(ticker.percent < 0)?'down':'up', 'col-5','text-right']" v-if="ticker.price">
                 <div class="coin-per"><span class="indicator"></span><span>{{ ticker.percent }}%</span></div>
-                <div class="coin-chg">{{parseFloat(ticker.chg).toFixed((info.quote === 'USDT') ? 3 : 8)}} </div>
-                <div><span class="text-secondary">Vol:</span> <span class="text-dark">{{ ticker.vol }}</span></div>
+                <div class="coin-chg">{{parseFloat(ticker.chg).toFixed((info.quote === 'USDT') ? 2 : 8)}} </div>
+                <div><span class="text-secondary">Vol:</span> <span class="text-dark">{{ parseFloat(ticker.vol).toFixed(0) }}</span></div>
             </div>
             <div class="dd-container" :class="[{'show': showDropDown}]" v-click-outside="closeDropDown">
                     <span role="button" class="menu-btn" @click.stop="onDropDown">
@@ -28,13 +28,13 @@
                 </div>
             </div>
         </div>
-        <div class="sparkline-chart" v-if="ticker.price">
+        <!-- <div class="sparkline-chart" v-if="ticker.price">
             <Sparkline :cdata="ticker.price" :width="380" :height="90"></Sparkline>
-        </div>
+        </div> -->
     </div>
 </template>
 <script>
-  import Sparkline from './Sparkline.vue'
+  // import Sparkline from './Sparkline.vue'
   import {unSubscribeSymbol} from '../services/binance'
   export default {
     props: ['ticker', 'info'],
@@ -61,8 +61,8 @@
         this.showDropDown = false;
       }
     },
-    components: {
-      Sparkline
-    }
+    // components: {
+    //   Sparkline
+    // }
   }
 </script>
